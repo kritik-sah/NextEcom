@@ -164,7 +164,7 @@ function OrderScreen() {
                   </tr>
                 </thead>
                 <tbody>
-                  {orderItems.map((item) => (
+                  {orderItems?.map((item) => (
                     <tr key={item._id} className="border-b">
                       <td>
                         <Link href={`/product/${item.slug}`}>
