@@ -7,7 +7,7 @@ import {FaTrash} from 'react-icons/fa'
 import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
 
-const cart = () => {
+const Cart = () => {
     const router = useRouter();
     const {state, dispatch} = useContext(Store)
     const {cart: {cartItems},} = state;
@@ -104,4 +104,4 @@ const cart = () => {
   )
 }
 
-export default dynamic(()=> Promise.resolve(cart), {ssr: false});
+export default dynamic(()=> Promise.resolve(Cart), {ssr: false});

@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router'
+
 import React ,{ useContext } from 'react'
 import Layout from '../../components/Layout'
 import Product from '../../models/Product';
@@ -13,7 +13,7 @@ import { Store } from '../../utils/Store';
 const ProductScreen = (props) => {
     const { product } = props;
     const {state, dispatch} = useContext(Store)
-    const router = useRouter();
+
     
     
 
@@ -112,6 +112,6 @@ export async function getServerSideProps(context){
         product: product ? db.convertDocToObj(product) : null,
       }
     }
-  };
+  }
 
 export default ProductScreen

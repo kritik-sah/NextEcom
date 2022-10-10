@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 
 
-const register = () => {
+const Register = () => {
 
   const { data: session } = useSession();
 
@@ -143,4 +143,4 @@ const register = () => {
   )
 }
 
-export default register
+export default Register
